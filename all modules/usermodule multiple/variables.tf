@@ -10,3 +10,4 @@ variable "users" {
     password     = string
   }))
 }
+#<variable "users"> here is referenced from var.users in main.tf

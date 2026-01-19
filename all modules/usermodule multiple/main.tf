@@ -1,4 +1,4 @@
-resource "azuread_user" "users" {
+resource "azuread_user" "newusers" {
   for_each = var.users
 
   user_principal_name   = "${each.key}@${var.tenant_domain}"
@@ -9,3 +9,5 @@ resource "azuread_user" "users" {
   password              = each.value.password
   force_password_change = false
 }
+#var.users here refers directly to <variable "users"> in variables.tf
+#"newusers" here referes directly to "azuread_user.newusers" in outputs.tf in
