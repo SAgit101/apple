@@ -9,7 +9,6 @@ users = {
     display_name = "Woman"
     password     = "Ironhello@123456!"
   }
-}
 #just add below section for any new users
 ##  monkey = {
 ##    display_name = "Monkey"
@@ -20,4 +19,4 @@ users = {
     display_name = "Monkey"
     password     = "chunkie@123456!"
   }
-}
+}#this stays as is
