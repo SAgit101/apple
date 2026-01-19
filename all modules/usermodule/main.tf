@@ -1,9 +1,13 @@
-resource "azuread_user" "afridi" {
-  user_principal_name   = "afridi@${var.tenant_domain}"
-  display_name          = "afridi"
-  mail_nickname         = "afridi"
+locals {
+  user_name = var.user_name
+}
+
+resource "azuread_user" "user" {
+  user_principal_name   = "${local.user_name}@${var.tenant_domain}"
+  display_name          = local.user_name
+  mail_nickname         = local.user_name
   account_enabled       = true
 
-  password              = var.afridi_password
+  password              = var.user_password
   force_password_change = false
 }

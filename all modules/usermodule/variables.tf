@@ -1,5 +1,10 @@
-variable "afridi_password" {
-  description = "Password for afridi Azure AD user (NON-PROD ONLY)"
+variable "user_name" {
+  description = "Username to create in Azure AD"
+  type        = string
+}
+
+variable "user_password" {
+  description = "Initial password for the user"
   type        = string
   sensitive   = true
 }
