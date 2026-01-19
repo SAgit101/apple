@@ -13,4 +13,8 @@ users = {
     display_name = "Monkey"
     password     = "chunkie@123456!"
   }
+    lion = {
+    display_name = "lion"
+    password     = "fhunkie@123456!"
+  }
 }
