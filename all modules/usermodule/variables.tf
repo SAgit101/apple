@@ -1,5 +1,5 @@
-variable "ironman_password" {
-  description = "Password for ironman Azure AD user (NON-PROD ONLY)"
+variable "afridi_password" {
+  description = "Password for afridi Azure AD user (NON-PROD ONLY)"
   type        = string
   sensitive   = true
 }

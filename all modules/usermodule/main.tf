@@ -1,9 +1,9 @@
 resource "azuread_user" "ironman" {
-  user_principal_name   = "ironman@${var.tenant_domain}"
-  display_name          = "Iron Man"
-  mail_nickname         = "ironman"
+  user_principal_name   = "afridi@${var.tenant_domain}"
+  display_name          = "afridi"
+  mail_nickname         = "afridi"
   account_enabled       = true
 
-  password              = var.ironman_password
+  password              = var.afridi_password
   force_password_change = false
 }
