@@ -11,8 +11,13 @@ users = {
   }
 }
 #just add below section for any new users
-#  monkey = {
-#    display_name = "Monkey"
-#    password     = "Monkey@123456!"
-#  }
-#}
+##  monkey = {
+##    display_name = "Monkey"
+##    password     = "chunkie@123456!"
+##  }
+##}
+  monkey = {
+    display_name = "Monkey"
+    password     = "chunkie@123456!"
+  }
+}
