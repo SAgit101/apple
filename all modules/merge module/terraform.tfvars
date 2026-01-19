@@ -9,7 +9,6 @@ users = {
     display_name = "happy"
     password     = "StrongP@ss2!"
   }
-}
   sup = {
     display_name = "sup"
     password     = "StrongP@ss2!"
