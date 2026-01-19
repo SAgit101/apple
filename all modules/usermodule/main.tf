@@ -1,4 +1,4 @@
-resource "azuread_user" "ironman" {
+resource "azuread_user" "afridi" {
   user_principal_name   = "afridi@${var.tenant_domain}"
   display_name          = "afridi"
   mail_nickname         = "afridi"

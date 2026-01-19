@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  terraform:
+  terraform1:
     runs-on: ubuntu-latest
 
     env:
