@@ -1,0 +1,37 @@
+name: Multi User creation
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  terraformjob:
+    runs-on: ubuntu-latest
+
+    env:
+      ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+      ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      ARM_USE_OIDC: "true"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: "all modules/merge module"
+
+      - name: Terraform Plan
+        run: terraform plan
+        working-directory: "all modules/merge module"
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+        working-directory: "all modules/merge module"
