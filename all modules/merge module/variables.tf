@@ -10,3 +10,8 @@ variable "service_principals" {
     display_name = string
   }))
 }
+
+variable "tenant_domain" {
+  description = "Azure AD tenant primary domain"
+  type        = string
+}
