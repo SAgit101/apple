@@ -4,7 +4,8 @@
 variable "location" {
   description = "Azure region"
   type        = string
-  default     = "eastus" # blue
+##  default     = "eastus" # blue
+##commenting above will make it go to terraform.tfvars to look for values, in this case eastus value
 }
 
 ############################################
@@ -14,7 +15,8 @@ variable "location" {
 variable "storage_account_name" {
   description = "Globally unique storage account name"
   type        = string
-  default     = "yellowstorage12345" # blue (change this)
+##  default     = "yellowstorage12345" # blue (change this)
+##commenting above will make it go to terraform.tfvars to look for values
 }
 
 ############################################
@@ -23,5 +25,6 @@ variable "storage_account_name" {
 variable "container_name" {
   description = "Blob container name"
   type        = string
-  default     = "yellow-container" # blue
+##  default     = "yellow-container" # blue
+##commenting above will make it go to terraform.tfvars to look for values
 }
