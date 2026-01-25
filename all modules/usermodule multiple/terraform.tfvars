@@ -33,6 +33,18 @@ users = {
     display_name = "black"
     password     = "fhunkie@123456!"
   }
+      blue = {
+    display_name = "blue"
+    password     = "fhunkie@123456!"
+  }
+      yellow = {
+    display_name = "yellow"
+    password     = "fhunkie@123456!"
+  }
+      white = {
+    display_name = "white"
+    password     = "fhunkie@123456!"
+  }    
 }#keep this line, and above this line, you can add below block for any new user
 ##      tiger = {
 ##    display_name = "tiger"
