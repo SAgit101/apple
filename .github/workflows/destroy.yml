@@ -1,4 +1,4 @@
-name: Destroy AKS
+name: Destroy
 
 on:
   workflow_dispatch:
@@ -11,15 +11,21 @@ jobs:
   destroy:
     runs-on: ubuntu-latest
 
+    env:
+      ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+      ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      ARM_USE_OIDC: "true"
+
     steps:
       - uses: actions/checkout@v4
 
       - uses: hashicorp/setup-terraform@v3
 
-      - name: Terraform Init (AKS)
+      - name: Terraform Init
         working-directory: "all modules/usermodule multiple"
         run: terraform init
 
-      - name: Terraform Destroy (AKS)
+      - name: Terraform Destroy
         working-directory: "all modules/usermodule multiple"
         run: terraform destroy -auto-approve
