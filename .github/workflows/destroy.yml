@@ -23,9 +23,9 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        working-directory: "all modules/usermodule multiple"
+        working-directory: "all modules/blobmodule"
         run: terraform init
 
       - name: Terraform Destroy
-        working-directory: "all modules/usermodule multiple"
+        working-directory: "all modules/blobmodule"
         run: terraform destroy -auto-approve
