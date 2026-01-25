@@ -28,3 +28,7 @@ variable "container_name" {
 ##  default     = "yellow-container" # blue
 ##commenting above will make it go to terraform.tfvars to look for values
 }
+variable "resource_group_name" {
+  description = "Name of the Azure Resource Group"
+  type        = string
+}
