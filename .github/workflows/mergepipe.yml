@@ -1,9 +1,11 @@
 name: Multi User creation
 
+#on:
+#  push:
+#    branches:
+#      - mai
 on:
-  push:
-    branches:
-      - mai
+  workflow_dispatch:
 
 permissions:
   id-token: write

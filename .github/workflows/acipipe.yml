@@ -1,9 +1,5 @@
-name: Multi User creation
+name: ACI
 
-#on:
-#  push:
-#    branches:
-#      - mai
 on:
   workflow_dispatch:
 
@@ -28,12 +24,12 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: "all modules/usermodule multiple"
+        working-directory: "all modules/acimodule"
 
       - name: Terraform Plan
         run: terraform plan
-        working-directory: "all modules/usermodule multiple"
+        working-directory: "all modules/acimodule"
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-        working-directory: "all modules/usermodule multiple"
+        working-directory: "all modules/acimodule"
